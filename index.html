@@ -370,6 +370,56 @@
   .board-item .role { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: var(--maroon); }
   .board-item .name { font-family: var(--display); font-size: 1.4rem; font-weight: 400; margin-top: 0.2rem; }
 
+  /* ---------- About page: mission cards + info groups ---------- */
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin: 1.5rem 0 2rem;
+  }
+  @media (max-width: 700px) { .mission-grid { grid-template-columns: 1fr; } }
+  .mission-card {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    padding: 1.5rem 1.6rem;
+  }
+  .mission-card h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    color: var(--maroon);
+    font-size: 1.6rem;
+    margin: 0 0 0.6rem;
+  }
+  .mission-card p { margin: 0; color: var(--ink); }
+  .mission-card strong { color: var(--maroon); }
+
+  .info-group { margin: 2.25rem 0; }
+  .group-pill {
+    display: inline-block;
+    background: var(--maroon);
+    color: var(--cream);
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.35rem;
+    padding: 0.5rem 1.3rem;
+    border-radius: 999px;
+    margin-bottom: 1.1rem;
+  }
+  .info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .info-card {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 16px;
+    padding: 1.1rem 1.3rem;
+  }
+  .info-card h4 { margin: 0 0 0.4rem; color: var(--maroon); font-family: var(--display); font-weight: 400; font-size: 1.35rem; }
+  .info-card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+
   /* ---------- Resources page ---------- */
   .resource-block { background: var(--panel); border: 1px solid var(--rule); border-radius: var(--radius); padding: 1.4rem 1.5rem; margin-bottom: 1.1rem; }
   .resource-block h3 { font-family: var(--display); font-size: 1.55rem; font-weight: 400; margin: 0.35rem 0 0.5rem; }
@@ -604,29 +654,121 @@
   <!-- ABOUT -->
   <section id="page-about" class="page">
     <h1 class="page-heading">About the Club</h1>
-    <p class="mission">Future Medicine Professionals Club is here for any student who's ever wondered what it's like to work in healthcare — whether that means being a surgeon, a paramedic, a researcher, or something we haven't heard of yet. We meet once a month to learn from guest speakers, explore different career paths, and support each other through the confusing process of figuring out what's next.</p>
 
-    <div class="what-we-do">
-      <div>
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v6M12 2c-2.5 0-4 2-4 4.5S9.5 11 12 11s4-2 4-4.5S14.5 2 12 2Z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M8 11v2c0 3 2 5 4 5s4-2 4-5v-2" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="18" cy="17" r="3" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
-        </div>
-        <h4>Guest speakers</h4>
-        <p>We invite people who actually work in healthcare to tell us what their job is really like — no textbook required.</p>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <h3>Our Mission</h3>
+        <p>The FMP club is dedicated to <strong>empowering and preparing high school students</strong> who aspire to enter the healthcare field. We provide an interactive environment to explore diverse medical careers, develop practical skills, and build a supportive community.</p>
       </div>
-      <div>
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-7-4.5-9.5-9C1 8.5 2.5 5 6 5c2 0 3.5 1 4.5 2.5C11.5 6 13 5 15 5c3.5 0 5 3.5 3.5 7-2.5 4.5-9.5 9-9.5 9z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
-        </div>
-        <h4>Shadowing & volunteering</h4>
-        <p>We share opportunities to shadow, volunteer, and get real (supervised) experience in a clinical setting.</p>
+      <div class="mission-card">
+        <h3>Who We Are</h3>
+        <p>Founded <strong>by students, for students</strong>, FMP is a club at Tracy High for anyone curious about medicine. Everyone is welcome, no experience needed.</p>
       </div>
-      <div>
-        <div class="icon-circle">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="9" r="2.6" stroke="currentColor" stroke-width="1.8"/><path d="M2.5 20c.5-3.5 3-5.5 5.5-5.5s5 2 5.5 5.5" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/><path d="M14.5 20c.4-2.6 2-4.2 4-4.2s3.4 1.6 3.8 4.2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+    </div>
+
+    <hr class="divider">
+
+    <div class="info-group">
+      <span class="group-pill">Why Join FMP?</span>
+      <div class="info-cards">
+        <div class="info-card">
+          <h4>Explore Career Paths</h4>
+          <p>Discover the specialties before college and find the one that fits: nursing, surgery, pediatrics, emergency medicine, radiology, pharmacy, dentistry, physical therapy, research, and public health.</p>
         </div>
-        <h4>Peer support</h4>
-        <p>Upperclassmen share what actually helped them — classes to take, how to ask for a shadowing spot, how to not panic about any of it.</p>
+        <div class="info-card">
+          <h4>Build Your Resume</h4>
+          <p>Leadership experience, practical skills, certifications, and volunteer hours.</p>
+        </div>
+        <div class="info-card">
+          <h4>Find Your Community</h4>
+          <p>Peers who share your passion for science and helping people.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-group">
+      <span class="group-pill">Learning by Doing</span>
+      <div class="info-cards">
+        <div class="info-card">
+          <h4>Skill Workshops</h4>
+          <p>Practice real clinical basics: taking vital signs, suturing, and first aid.</p>
+        </div>
+        <div class="info-card">
+          <h4>Medical Mysteries</h4>
+          <p>Work through real case studies, symptom puzzles, lab results, and patient scenarios as a team. Some run like an escape room, all of them build clinical reasoning.</p>
+        </div>
+        <div class="info-card">
+          <h4>Certifications</h4>
+          <p>Work toward CPR, Basic Life Support, and Stop the Bleed. These are credentials you keep.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-group">
+      <span class="group-pill">Voices From the Field</span>
+      <div class="info-cards">
+        <div class="info-card">
+          <h4>Frontline Speaker Series</h4>
+          <p>Doctors, surgeons, nurses, paramedics, and physical therapists come in to talk about what the job is actually like, the good days and the hard ones.</p>
+        </div>
+        <div class="info-card">
+          <h4>The Future of Medicine</h4>
+          <p>Dig into artificial intelligence in medicine, bioengineering, and the technology reshaping how care gets delivered.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-group">
+      <span class="group-pill">Medical Mixers</span>
+      <div class="info-cards">
+        <div class="info-card">
+          <h4>Trivia and Game Nights</h4>
+          <p>Medical Jeopardy, Hollywood vs. Real Life, and Operation tournaments.</p>
+        </div>
+        <div class="info-card">
+          <h4>Medical Scavenger Hunts</h4>
+          <p>Follow a trail of symptoms and medical clues hidden around the room to solve a diagnosis.</p>
+        </div>
+        <div class="info-card">
+          <h4>Team Socials</h4>
+          <p>Fun mixers, parties, and casual hangouts to build a supportive community.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-group">
+      <span class="group-pill">Community and Research</span>
+      <div class="info-cards">
+        <div class="info-card">
+          <h4>Research Led by Students</h4>
+          <p>Run public health and medical research projects, then publish them on the FMP website as a portfolio you can point to.</p>
+        </div>
+        <div class="info-card">
+          <h4>Health Drives and Campaigns</h4>
+          <p>Organize service initiatives and awareness campaigns around Tracy.</p>
+        </div>
+        <div class="info-card">
+          <h4>Red Cross Blood Drives</h4>
+          <p>Partner with the American Red Cross to host and staff school and community drives.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-group">
+      <span class="group-pill">Mentorship and Next Steps</span>
+      <div class="info-cards">
+        <div class="info-card">
+          <h4>Meet Professionals</h4>
+          <p>Network with local healthcare workers who can answer the questions Google cannot.</p>
+        </div>
+        <div class="info-card">
+          <h4>Internships and Shadowing</h4>
+          <p>Get help finding and applying to summer programs, shadowing, and hospital volunteering.</p>
+        </div>
+        <div class="info-card">
+          <h4>Peer Study Groups</h4>
+          <p>Study sessions for IB Biology, IB Chemistry, and the AP sciences.</p>
+        </div>
       </div>
     </div>
 
@@ -634,6 +776,7 @@
 
     <h2 style="font-family:var(--display); font-weight:400; font-size:2rem; margin-bottom:1.25rem;">Club Leadership</h2>
     <div class="board-grid">
+
       <div class="board-item"><div class="role">Faculty Advisor</div><div class="name">Mrs. Kaur</div></div>
       <div class="board-item"><div class="role">President</div><div class="name">Haziqah Asim</div></div>
       <div class="board-item"><div class="role">President</div><div class="name">Saihajnoor Sehkon</div></div>
